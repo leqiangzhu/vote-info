@@ -1,17 +1,14 @@
 $(document).ready(function() {
-  $("#formOne").submit(function(event) {
-    var nameInput = $("input#name").val();
-    var food = $("#food").val();
-    var flavor = $("input:radio[name=flavor]:checked").val();
-    $("#result").show();
-    event.preventDefault();
+  var age = parseInt(prompt("How old are you?"));
 
-    $(".yourname").text(nameInput);
-    $(".yourbeverage").text(food);
-    $(".yourflavor").text(flavor);
-    event.preventDefault();
-
-  });
+  if (age >= 18) {
+    $('#Above18').show();
+  // } else if (age === ) {
+  //   alert("Now don't go crazy!");
+  //   $('#drinks').show();
+  } else {
+    $('#Below18').show();
+  }
 });
 
 
